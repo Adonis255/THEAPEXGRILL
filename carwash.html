@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Wash Services & Prices | Apex Grill Chepterit</title>
+    <meta name="description" content="Premium car wash services at Apex Grill Chepterit. Body wash, interior detailing, buffing, engine wash, under wash & more. Sparkling clean while you dine!">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Service image placeholder */
+        .service-img-wrapper {
+            width: 100%;
+            height: 180px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 18px;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .service-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+        .package-card:hover .service-img-wrapper img {
+            transform: scale(1.03);
+        }
+        .img-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            font-size: 2.8rem;
+            height: 100%;
+        }
+        .img-placeholder span {
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-top: 5px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+        <div class="top-bar">
+            <div class="container top-bar-inner">
+                <div class="top-bar-left">
+                    <span><i class="fas fa-map-marker-alt"></i> Chepterit - Baraton Rd, Kapsabet</span>
+                    <span><i class="fas fa-phone"></i> 0722 151654</span>
+                </div>
+                <div class="top-bar-right">
+                    <span><i class="fas fa-star"></i> 5.0 (6 Reviews)</span>
+                    <span><i class="fas fa-clock"></i> 6am – 10pm Daily</span>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar" id="navbar">
+            <div class="container nav-inner">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon"><i class="fas fa-fire"></i></span>
+                    <div class="logo-text">
+                        <span class="logo-name">APEX GRILL</span>
+                        <span class="logo-sub">Chepterit</span>
+                    </div>
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="carwash.html" class="nav-link active">Car Wash</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="https://apexmenu.netlify.app" class="nav-link nav-specials" target="_blank">MENU</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary btn-nav">Reserve Table</a>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========== PAGE BANNER ========== -->
+    <section class="page-banner" style="background-image: url('car.jpg');">
+        <div class="page-banner-overlay"></div>
+        <div class="page-banner-content">
+            <h1>Premium Car Wash</h1>
+            <p>Drive out sparkling clean while you enjoy our legendary Choma</p>
+        </div>
+    </section>
+
+    <!-- ========== INTRO SECTION ========== -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="carwash-preview-grid">
+                <div class="carwash-preview-text">
+                    <span class="section-tag">Why Wash With Us?</span>
+                    <h2>More Than Just a Wash –<br>It's a Transformation</h2>
+                    <p class="lead-text">At Apex Grill Chepterit, we understand your car deserves the best. While you relax and savor our mouth‑watering nyama choma, our skilled team gives your vehicle the royal treatment it deserves.</p>
+                    <p>We use only pH‑balanced, eco‑friendly cleaning products that are tough on dirt but gentle on your car's paint, rubber, and plastic. Our water‑efficient methods save resources without compromising on shine.</p>
+                    <div class="carwash-feature-list" style="margin-top:25px;">
+                        <li><i class="fas fa-check-circle"></i> High‑pressure pre‑wash & foam treatment</li>
+                        <li><i class="fas fa-check-circle"></i> Hand wash with microfiber mitts</li>
+                        <li><i class="fas fa-check-circle"></i> Wheel & tire deep cleaning</li>
+                        <li><i class="fas fa-check-circle"></i> Spot‑free rinse & hand drying</li>
+                        <li><i class="fas fa-check-circle"></i> Free air freshener with every wash</li>
+                    </div>
+                </div>
+                <div class="carwash-preview-img">
+    <!-- Video replacing the image -->
+    <video 
+        src="carwashing.mp4"
+        poster="car.jpg"
+        autoplay
+        muted
+        loop
+        playsinline
+        onerror="this.style.display='none'; this.parentElement.querySelector('.video-placeholder').style.display='flex';"
+    >
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Optional fallback placeholder if video fails (hidden by default) -->
+    <div class="video-placeholder" style="display:none; align-items:center; justify-content:center; height:100%; background:#333; color:#fff; font-size:1.2rem; flex-direction:column; gap:8px; border-radius:12px;">
+        <i class="fas fa-video"></i>
+        <span>Video unavailable</span>
+    </div>
+
+    <!-- Price badge stays exactly as it was — now over the video -->
+    <div class="carwash-price-badge">
+        <span>Starting at</span>
+        <strong>KES 500</strong>
+    </div>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== OUR SERVICES & PRICING ========== -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Full Menu of Services</span>
+                <h2>Our Car Wash Packages & Prices</h2>
+                <p>Choose the perfect treatment for your vehicle – from a quick shine to a complete rejuvenation</p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="wash-packages-grid" style="margin-top: 40px;">
+                
+                <!-- 1. Body Wash -->
+                <div class="package-card">
+                    <div class="package-icon"><i class="fas fa-car-side"></i></div>
+                    <h3>Body Wash</h3>
+                    <p class="package-desc">Thorough exterior hand wash with pH‑neutral shampoo, wheel cleaning & spot‑free drying.</p>
+                    <div class="package-price">KES 500</div>
+                    <ul class="carwash-feature-list" style="text-align: left; margin: 0 auto; display: inline-block;">
+                        <li><i class="fas fa-check-circle"></i> High‑pressure pre‑rinse</li>
+                        <li><i class="fas fa-check-circle"></i> Foam cannon treatment</li>
+                        <li><i class="fas fa-check-circle"></i> Wheel & tire scrubbing</li>
+                        <li><i class="fas fa-check-circle"></i> Hand drying with microfiber</li>
+                    </ul>
+                    <div class="service-img-wrapper">
+                        <img src="images/carwash/body-wash.jpg" alt="Body Wash" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-car-side></i><span>Body Wash Image</span></div>';">
+                    </div>
+                </div>
+
+                <!-- 2. Interior Detailing -->
+                <div class="package-card featured">
+                    <div class="package-icon"><i class="fas fa-spray-can-sparkles"></i></div>
+                    <h3>Interior Detailing</h3>
+                    <p class="package-desc">Deep interior cleaning: vacuum, upholstery shampoo, dashboard & console wipedown, glass cleaning.</p>
+                    <div class="package-price">KES 800</div>
+                    <ul class="carwash-feature-list" style="text-align: left; margin: 0 auto; display: inline-block;">
+                        <li><i class="fas fa-check-circle"></i> Full vacuum (seats, carpets, boot)</li>
+                        <li><i class="fas fa-check-circle"></i> Dashboard polishing & UV protection</li>
+                        <li><i class="fas fa-check-circle"></i> Window & mirror streak‑free cleaning</li>
+                        <li><i class="fas fa-check-circle"></i> Air vent dusting & deodorizing</li>
+                    </ul>
+                    <div class="service-img-wrapper">
+                        <img src="images/carwash/interior-detailing.jpg" alt="Interior Detailing" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-spray-can-sparkles></i><span>Interior Detailing Image</span></div>';">
+                    </div>
+                </div>
+
+                <!-- 3. Thorough Cleaning (Full Exterior + Interior) -->
+                <div class="package-card">
+                    <div class="package-icon"><i class="fas fa-star"></i></div>
+                    <h3>Thorough Cleaning</h3>
+                    <p class="package-desc">The complete package – body wash + interior detailing. A total refresh inside and out.</p>
+                    <div class="package-price">KES 1,200</div>
+                    <ul class="carwash-feature-list" style="text-align: left; margin: 0 auto; display: inline-block;">
+                        <li><i class="fas fa-check-circle"></i> Everything in Body Wash</li>
+                        <li><i class="fas fa-check-circle"></i> Everything in Interior Detailing</li>
+                        <li><i class="fas fa-check-circle"></i> Door jambs cleaning</li>
+                        <li><i class="fas fa-check-circle"></i> Tire dressing & shine</li>
+                    </ul>
+                    <div class="service-img-wrapper">
+                        <img src="images/carwash/thorough-cleaning.jpg" alt="Thorough Cleaning" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-star></i><span>Thorough Cleaning Image</span></div>';">
+                    </div>
+                </div>
+
+                <!-- 4. Buffing (Wax & Polish) -->
+                <div class="package-card">
+                    <div class="package-icon"><i class="fas fa-shield-haltered"></i></div>
+                    <h3>Buffing & Wax Polish</h3>
+                    <p class="package-desc">Restore your car’s showroom gloss. Machine buffing with premium carnauba wax for deep shine & protection.</p>
+                    <div class="package-price">KES 1,500</div>
+                    <ul class="carwash-feature-list" style="text-align: left; margin: 0 auto; display: inline-block;">
+                        <li><i class="fas fa-check-circle"></i> Machine polishing</li>
+                        <li><i class="fas fa-check-circle"></i> Carnauba wax application</li>
+                        <li><i class="fas fa-check-circle"></i> Swirl mark removal</li>
+                        <li><i class="fas fa-check-circle"></i> Final hand buff</li>
+                    </ul>
+                    <div class="service-img-wrapper">
+                        <img src="images/carwash/buffing.jpg" alt="Buffing & Polish" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-shield-haltered></i><span>Buffing Image</span></div>';">
+                    </div>
+                </div>
+
+                <!-- 5. Under Wash (Chassis) -->
+                <div class="package-card">
+                    <div class="package-icon"><i class="fas fa-oil-can"></i></div>
+                    <h3>Under Wash</h3>
+                    <p class="package-desc">High‑pressure underbody flush to remove mud, salt, and road grime. Protects chassis from corrosion.</p>
+                    <div class="package-price">KES 400</div>
+                    <ul class="carwash-feature-list" style="text-align: left; margin: 0 auto; display: inline-block;">
+                        <li><i class="fas fa-check-circle"></i> Chassis & wheel arch spray</li>
+                        <li><i class="fas fa-check-circle"></i> Mud & salt removal</li>
+                        <li><i class="fas fa-check-circle"></i> Rust prevention rinse</li>
+                        <li><i class="fas fa-check-circle"></i> (Can be added to any package)</li>
+                    </ul>
+                    <div class="service-img-wrapper">
+                        <img src="images/carwash/under-wash.jpg" alt="Under Wash" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-oil-can></i><span>Under Wash Image</span></div>';">
+                    </div>
+                </div>
+
+                <!-- 6. Carpet Wash -->
+                <div class="package-card">
+                    <div class="package-icon"><i class="fas fa-rug"></i></div>
+                    <h3>Carpet & Mat Wash</h3>
+                    <p class="package-desc">Deep extraction cleaning of carpets and floor mats. Removes stains, odors, and embedded dirt.</p>
+                    <div class="package-price">KES 600</div>
+                    <ul class="carwash-feature-list" style="text-align: left; margin: 0 auto; display: inline-block;">
+                        <li><i class="fas fa-check-circle"></i> Hot water extraction</li>
+                        <li><i class="fas fa-check-circle"></i> Stain & odor treatment</li>
+                        <li><i class="fas fa-check-circle"></i> Quick drying system</li>
+                        <li><i class="fas fa-check-circle"></i> Mat scrubbing & rinse</li>
+                    </ul>
+                    <div class="service-img-wrapper">
+                        <img src="images/carwash/carpet-wash.jpg" alt="Carpet Wash" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-rug></i><span>Carpet Wash Image</span></div>';">
+                    </div>
+                </div>
+
+                <!-- 7. Engine Wash -->
+                <div class="package-card">
+                    <div class="package-icon"><i class="fas fa-engine-warning"></i></div>
+                    <h3>Engine Bay Wash</h3>
+                    <p class="package-desc">Safe engine degreasing and detailing. Makes your engine look new and helps detect leaks early.</p>
+                    <div class="package-price">KES 700</div>
+                    <ul class="carwash-feature-list" style="text-align: left; margin: 0 auto; display: inline-block;">
+                        <li><i class="fas fa-check-circle"></i> Gentle degreaser application</li>
+                        <li><i class="fas fa-check-circle"></i> Brushing & rinse</li>
+                        <li><i class="fas fa-check-circle"></i> Plastic cover dressing</li>
+                        <li><i class="fas fa-check-circle"></i> Battery terminal check</li>
+                    </ul>
+                    <div class="service-img-wrapper">
+                        <img src="images/carwash/engine-wash.jpg" alt="Engine Wash" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-engine-warning></i><span>Engine Wash Image</span></div>';">
+                    </div>
+                </div>
+
+                <!-- 8. Dashboard Polishing -->
+                <div class="package-card">
+                    <div class="package-icon"><i class="fas fa-gauge-high"></i></div>
+                    <h3>Dashboard Polishing</h3>
+                    <p class="package-desc">Restore and protect your dashboard, console, and door panels with UV‑blocking dressing.</p>
+                    <div class="package-price">KES 350</div>
+                    <ul class="carwash-feature-list" style="text-align: left; margin: 0 auto; display: inline-block;">
+                        <li><i class="fas fa-check-circle"></i> Dust & grime removal</li>
+                        <li><i class="fas fa-check-circle"></i> Matte or gloss dressing</li>
+                        <li><i class="fas fa-check-circle"></i> UV protection</li>
+                        <li><i class="fas fa-check-circle"></i> Air vent detail</li>
+                    </ul>
+                    <div class="service-img-wrapper">
+                        <img src="images/carwash/dashboard-polishing.jpg" alt="Dashboard Polishing" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-gauge-high></i><span>Dashboard Polishing Image</span></div>';">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add‑on Services Note -->
+            <div class="text-center mt-3">
+                <p class="lead-text">All services can be added individually or combined. Ask about our <strong>combo packages</strong> for the best value! <br> We also offer <strong>monthly car wash subscriptions</strong> – contact us for details.</p>
+                <a href="contact.html" class="btn btn-primary btn-lg"><i class="fas fa-phone"></i> Call to Book Your Wash</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== THE PROCESS ========== -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">How It Works</span>
+                <h2>Our 4‑Step Car Wash Process</h2>
+            </div>
+            <div class="features-grid-4" style="margin-top: 30px;">
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-1"></i></div>
+                    <h4>Park & Dine</h4>
+                    <p>Drive in, park in our secure lot, and place your wash order while you enjoy your meal.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-2"></i></div>
+                    <h4>Pre‑Wash Inspection</h4>
+                    <p>Our team inspects your vehicle and applies the chosen treatment with care and precision.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-3"></i></div>
+                    <h4>Professional Cleaning</h4>
+                    <p>Using premium products and modern equipment, we work inside and out for a flawless finish.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-4"></i></div>
+                    <h4>Final Check & Shine</h4>
+                    <p>We perform a final quality check, hand‑dry any spots, and present your spotless car.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WHY OUR CAR WASH IS SPECIAL ========== -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">The Apex Difference</span>
+                <h2>Why Customers Love Our Car Wash</h2>
+            </div>
+            <div class="why-choose-grid" style="margin-top: 30px;">
+                <div class="why-card">
+                    <i class="fas fa-clock"></i>
+                    <h4>Convenience</h4>
+                    <p>Eat while we wash. No waiting rooms – enjoy a delicious meal and your car is ready by the time you finish.</p>
+                </div>
+                <div class="why-card">
+                    <i class="fas fa-leaf"></i>
+                    <h4>Eco‑Friendly</h4>
+                    <p>Biodegradable soaps, water recycling system, and energy‑efficient dryers to protect the environment.</p>
+                </div>
+                <div class="why-card">
+                    <i class="fas fa-user-tie"></i>
+                    <h4>Trained Professionals</h4>
+                    <p>Our car wash team is trained in the latest detailing techniques and treats every car like their own.</p>
+                </div>
+                <div class="why-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Safe on Paint</h4>
+                    <p>We use pH‑neutral, scratch‑free products and microfiber cloths to keep your paint protected.</p>
+                </div>
+                <div class="why-card">
+                    <i class="fas fa-tag"></i>
+                    <h4>Affordable Prices</h4>
+                    <p>Premium services without the premium price tag. Value that keeps you coming back.</p>
+                </div>
+                <div class="why-card">
+                    <i class="fas fa-car"></i>
+                    <h4>All Vehicle Types</h4>
+                    <p>From saloon cars to SUVs, pickups to vans – we handle them all with equal care.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== GALLERY SLIDER ========== -->
+    <section class="section-padding bg-dark">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag light">Results Speak</span>
+                <h2 class="text-white">Before & After Transformations</h2>
+            </div>
+            <div class="gallery-grid" style="margin-top: 30px;">
+                <div class="gallery-item">
+                    <img src="images/carwash/before-after-1.jpg" alt="Car before and after wash" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder style=height:100%><i class=f fas fa-car-side></i><span>Before/After</span></div>';">
+                    <div class="overlay"><span>Sedan: Before → After</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/carwash/before-after-2.jpg" alt="SUV before and after" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder style=height:100%><i class=f fas fa-truck></i><span>Before/After</span></div>';">
+                    <div class="overlay"><span>SUV: Before → After</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/carwash/before-after-3.jpg" alt="Interior detailing result" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder style=height:100%><i class=f fas fa-spray-can-sparkles></i><span>Before/After</span></div>';">
+                    <div class="overlay"><span>Interior Detailing Magic</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="cta-section section-padding">
+        <div class="container text-center">
+            <span class="section-tag">Get Your Car Gleaming</span>
+            <h2 class="cta-title">Ready for the Ultimate<br>Choma & Car Wash Experience?</h2>
+            <p class="cta-desc">Visit Apex Grill Chepterit today. Enjoy the best nyama choma in town while we turn your car into a mirror on wheels.</p>
+            <div class="cta-btns">
+                <a href="contact.html" class="btn btn-primary btn-lg">Get Directions</a>
+                <a href="tel:0722151654" class="btn btn-outline-dark btn-lg"><i class="fas fa-phone"></i> 0722 151654</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <span class="logo-icon"><i class="fas fa-fire"></i></span>
+                        <span class="logo-name">APEX GRILL</span>
+                    </div>
+                    <p>The ultimate Choma Zone destination in Chepterit. Great food, refreshing drinks & premium car wash — all in one place.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="menu.html">Food Menu</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="carwash.html">Car Wash</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Car Wash Services</h4>
+                    <ul>
+                        <li><a href="carwash.html">Body Wash</a></li>
+                        <li><a href="carwash.html">Interior Detailing</a></li>
+                        <li><a href="carwash.html">Buffing & Wax</a></li>
+                        <li><a href="carwash.html">Engine Wash</a></li>
+                        <li><a href="carwash.html">Under Wash</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Chepterit - Baraton Rd, Kapsabet</li>
+                        <li><i class="fas fa-phone"></i> 0722 151654</li>
+                        <li><i class="fas fa-envelope"></i> info@apexgrillchepterit.co.ke</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Apex Grill Chepterit. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top-btn" id="scrollTopBtn"><i class="fas fa-chevron-up"></i></button>
+
+    <script src="script.js"></script>
+</body>
+</html>
