@@ -1263,7 +1263,7 @@ img {
 }
 /* ---------- New Logo Image ---------- */
 .logo-img {
-    height: 50px;          /* adjust to match your logo’s proportions */
+    height: 50px;          /* adjust to match your logo's proportions */
     width: auto;
     object-fit: contain;
     display: block;

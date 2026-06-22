@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        /* Service image placeholder */
         .service-img-wrapper {
             width: 100%;
             height: 180px;
@@ -45,6 +44,10 @@
             font-weight: 500;
             margin-top: 5px;
             color: #888;
+        }
+        .package-desc {
+            font-size: 0.95rem;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -116,185 +119,188 @@
                     </div>
                 </div>
                 <div class="carwash-preview-img">
-    <!-- Video replacing the image -->
-    <!--<video 
-        src="carwashing.mp4"
-        poster="car.jpg"
-        autoplay
-        muted
-        loop
-        playsinline
-        onerror="this.style.display='none'; this.parentElement.querySelector('.video-placeholder').style.display='flex';"
-    >
-        Your browser does not support the video tag.
-    </video> -->
-
-    <!-- Optional fallback placeholder if video fails (hidden by default) -->
-    <div class="video-placeholder" style="display:none; align-items:center; justify-content:center; height:100%; background:#333; color:#fff; font-size:1.2rem; flex-direction:column; gap:8px; border-radius:12px;">
-        <i class="fas fa-video"></i>
-        <span>Video unavailable</span>
-    </div>
-
-    <!-- Price badge stays exactly as it was — now over the video -->
-    <div class="carwash-price-badge">
-        <span>Starting at</span>
-        <strong>KES 500</strong>
-    </div>
-</div>
+                    <!-- Video is commented out; you can uncomment if you have carwashing.mp4 -->
+                    <!--<video 
+                        src="carwashing.mp4"
+                        poster="car.jpg"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        onerror="this.style.display='none'; this.parentElement.querySelector('.video-placeholder').style.display='flex';"
+                    >
+                        Your browser does not support the video tag.
+                    </video> -->
+                    <div class="video-placeholder" style="display:none; align-items:center; justify-content:center; height:100%; background:#333; color:#fff; font-size:1.2rem; flex-direction:column; gap:8px; border-radius:12px;">
+                        <i class="fas fa-video"></i>
+                        <span>Video unavailable</span>
+                    </div>
+                    <div class="carwash-price-badge">
+                        <span>Starting at</span>
+                        <strong>KES 200</strong>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== OUR SERVICES & PRICING ========== -->
+    <!-- ========== SERVICES & PRICING – 13 INDIVIDUAL CARDS ========== -->
     <section class="section-padding">
         <div class="container">
             <div class="section-header text-center">
                 <span class="section-tag">Full Menu of Services</span>
                 <h2>Our Car Wash Packages & Prices</h2>
-                <p>Choose the perfect treatment for your vehicle – from a quick shine to a complete rejuvenation</p>
+                <p>Choose from our 13 specialized services – from a quick exterior wash to a complete rejuvenation</p>
             </div>
 
-            <!-- Services Grid -->
             <div class="wash-packages-grid" style="margin-top: 40px;">
-                
-                <!-- 1. Body Wash -->
+
+                <!-- 1. Body Wash – Saloon Cars -->
+                <div class="package-card">
+                    <div class="package-icon"><i class="fas fa-car"></i></div>
+                    <h3>Body Wash – Saloon Cars</h3>
+                    <p class="package-desc">High‑pressure pre‑wash, foam treatment, hand wash & spot‑free drying for saloon cars.</p>
+                    <div class="package-price">KES 250</div>
+                    <div class="service-img-wrapper">
+                        <img src="saloonwash.jpg" alt="Saloon Car Wash" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-car></i><span>Saloon Wash</span></div>';">
+                    </div>
+                </div>
+
+                <!-- 2. Body Wash – SUVs & Vans -->
                 <div class="package-card">
                     <div class="package-icon"><i class="fas fa-car-side"></i></div>
-                    <h3>Body Wash</h3>
-                    <p class="package-desc">Thorough exterior hand wash with pH‑neutral shampoo, wheel cleaning & spot‑free drying.</p>
+                    <h3>Body Wash – SUVs & Vans</h3>
+                    <p class="package-desc">High‑pressure pre‑wash, foam treatment, hand wash & spot‑free drying for SUVs and vans.</p>
+                    <div class="package-price">KES 300</div>
+                    <div class="service-img-wrapper">
+                        <img src="suvwash.jpg" alt="SUV Wash" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-car-side></i><span>SUV Wash</span></div>';">
+                    </div>
+                </div>
+
+                <!-- 3. Body Wash – Canter -->
+                <div class="package-card">
+                    <div class="package-icon"><i class="fas fa-truck"></i></div>
+                    <h3>Body Wash – Canter</h3>
+                    <p class="package-desc">Thorough exterior wash for Canter trucks – mud, grime, and road dust removed.</p>
                     <div class="package-price">KES 500</div>
-                    <ul class="carwash-feature-list" style="text-align: left; margin: 0 auto; display: inline-block;">
-                        <li><i class="fas fa-check-circle"></i> High‑pressure pre‑rinse</li>
-                        <li><i class="fas fa-check-circle"></i> Foam cannon treatment</li>
-                        <li><i class="fas fa-check-circle"></i> Wheel & tire scrubbing</li>
-                        <li><i class="fas fa-check-circle"></i> Hand drying with microfiber</li>
-                    </ul>
                     <div class="service-img-wrapper">
-                        <img src="images/carwash/body-wash.jpg" alt="Body Wash" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-car-side></i><span>Body Wash Image</span></div>';">
+                        <img src="images/carwash/body-wash-can.jpg" alt="Canter Wash" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-truck></i><span>Canter Wash</span></div>';">
                     </div>
                 </div>
 
-                <!-- 2. Interior Detailing -->
-                <div class="package-card featured">
-                    <div class="package-icon"><i class="fas fa-spray-can-sparkles"></i></div>
-                    <h3>Interior Detailing</h3>
-                    <p class="package-desc">Deep interior cleaning: vacuum, upholstery shampoo, dashboard & console wipedown, glass cleaning.</p>
+                <!-- 4. Body Wash – Lorry -->
+                <div class="package-card">
+                    <div class="package-icon"><i class="fas fa-truck-moving"></i></div>
+                    <h3>Body Wash – Lorry</h3>
+                    <p class="package-desc">Full exterior wash for heavy lorries – removes tough road grime and mud.</p>
                     <div class="package-price">KES 800</div>
-                    <ul class="carwash-feature-list" style="text-align: left; margin: 0 auto; display: inline-block;">
-                        <li><i class="fas fa-check-circle"></i> Full vacuum (seats, carpets, boot)</li>
-                        <li><i class="fas fa-check-circle"></i> Dashboard polishing & UV protection</li>
-                        <li><i class="fas fa-check-circle"></i> Window & mirror streak‑free cleaning</li>
-                        <li><i class="fas fa-check-circle"></i> Air vent dusting & deodorizing</li>
-                    </ul>
                     <div class="service-img-wrapper">
-                        <img src="images/carwash/interior-detailing.jpg" alt="Interior Detailing" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-spray-can-sparkles></i><span>Interior Detailing Image</span></div>';">
+                        <img src="images/carwash/body-wash-lorry.jpg" alt="Lorry Wash" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-truck-moving></i><span>Lorry Wash</span></div>';">
                     </div>
                 </div>
 
-                <!-- 3. Thorough Cleaning (Full Exterior + Interior) -->
+                <!-- 5. Body Wash – Bus -->
                 <div class="package-card">
-                    <div class="package-icon"><i class="fas fa-star"></i></div>
-                    <h3>Thorough Cleaning</h3>
-                    <p class="package-desc">The complete package – body wash + interior detailing. A total refresh inside and out.</p>
+                    <div class="package-icon"><i class="fas fa-bus"></i></div>
+                    <h3>Body Wash – Bus</h3>
+                    <p class="package-desc">Complete exterior cleaning for buses – including roof, sides, and wheel arches.</p>
+                    <div class="package-price">KES 800</div>
+                    <div class="service-img-wrapper">
+                        <img src="images/carwash/body-wash-bus.jpg" alt="Bus Wash" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-bus></i><span>Bus Wash</span></div>';">
+                    </div>
+                </div>
+
+                <!-- 6. Body Wash – Mahewa -->
+                <div class="package-card">
+                    <div class="package-icon"><i class="fas fa-tractor"></i></div>
+                    <h3>Body Wash – Mahewa</h3>
+                    <p class="package-desc">Heavy‑duty exterior wash for Mahewa trucks – built to handle the toughest dirt.</p>
+                    <div class="package-price">KES 1,000</div>
+                    <div class="service-img-wrapper">
+                        <img src="images/carwash/body-wash-mahewa.jpg" alt="Mahewa Wash" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-tractor></i><span>Mahewa Wash</span></div>';">
+                    </div>
+                </div>
+
+                <!-- 7. Body Wash – Tipper -->
+                <div class="package-card">
+                    <div class="package-icon"><i class="fas fa-dumpster"></i></div>
+                    <h3>Body Wash – Tipper</h3>
+                    <p class="package-desc">Exterior wash for tippers – removes heavy mud, dust, and construction residue.</p>
                     <div class="package-price">KES 1,200</div>
-                    <ul class="carwash-feature-list" style="text-align: left; margin: 0 auto; display: inline-block;">
-                        <li><i class="fas fa-check-circle"></i> Everything in Body Wash</li>
-                        <li><i class="fas fa-check-circle"></i> Everything in Interior Detailing</li>
-                        <li><i class="fas fa-check-circle"></i> Door jambs cleaning</li>
-                        <li><i class="fas fa-check-circle"></i> Tire dressing & shine</li>
-                    </ul>
                     <div class="service-img-wrapper">
-                        <img src="images/carwash/thorough-cleaning.jpg" alt="Thorough Cleaning" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-star></i><span>Thorough Cleaning Image</span></div>';">
+                        <img src="images/carwash/body-wash-tipper.jpg" alt="Tipper Wash" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-dumpster></i><span>Tipper Wash</span></div>';">
                     </div>
                 </div>
 
-                <!-- 4. Buffing (Wax & Polish) -->
+                <!-- 8. Body Wash – Heavy Equipment -->
                 <div class="package-card">
-                    <div class="package-icon"><i class="fas fa-shield-haltered"></i></div>
-                    <h3>Buffing & Wax Polish</h3>
-                    <p class="package-desc">Restore your car’s showroom gloss. Machine buffing with premium carnauba wax for deep shine & protection.</p>
+                    <div class="package-icon"><i class="fas fa-crane"></i></div>
+                    <h3>Body Wash – Heavy Equipment</h3>
+                    <p class="package-desc">Specialized cleaning for graders, backhoes, and other heavy machinery.</p>
                     <div class="package-price">KES 1,500</div>
-                    <ul class="carwash-feature-list" style="text-align: left; margin: 0 auto; display: inline-block;">
-                        <li><i class="fas fa-check-circle"></i> Machine polishing</li>
-                        <li><i class="fas fa-check-circle"></i> Carnauba wax application</li>
-                        <li><i class="fas fa-check-circle"></i> Swirl mark removal</li>
-                        <li><i class="fas fa-check-circle"></i> Final hand buff</li>
-                    </ul>
                     <div class="service-img-wrapper">
-                        <img src="images/carwash/buffing.jpg" alt="Buffing & Polish" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-shield-haltered></i><span>Buffing Image</span></div>';">
+                        <img src="images/carwash/body-wash-heavy.jpg" alt="Heavy Equipment Wash" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-crane></i><span>Heavy Equip</span></div>';">
                     </div>
                 </div>
 
-                <!-- 5. Under Wash (Chassis) -->
+                <!-- 9. Under Wash – Small Car -->
                 <div class="package-card">
                     <div class="package-icon"><i class="fas fa-oil-can"></i></div>
-                    <h3>Under Wash</h3>
-                    <p class="package-desc">High‑pressure underbody flush to remove mud, salt, and road grime. Protects chassis from corrosion.</p>
-                    <div class="package-price">KES 400</div>
-                    <ul class="carwash-feature-list" style="text-align: left; margin: 0 auto; display: inline-block;">
-                        <li><i class="fas fa-check-circle"></i> Chassis & wheel arch spray</li>
-                        <li><i class="fas fa-check-circle"></i> Mud & salt removal</li>
-                        <li><i class="fas fa-check-circle"></i> Rust prevention rinse</li>
-                        <li><i class="fas fa-check-circle"></i> (Can be added to any package)</li>
-                    </ul>
+                    <h3>Under Wash – Small Car</h3>
+                    <p class="package-desc">High‑pressure underbody flush to remove mud, salt, and road grime from small cars.</p>
+                    <div class="package-price">KES 200</div>
                     <div class="service-img-wrapper">
-                        <img src="images/carwash/under-wash.jpg" alt="Under Wash" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-oil-can></i><span>Under Wash Image</span></div>';">
+                        <img src="images/carwash/under-wash.jpg" alt="Under Wash" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-oil-can></i><span>Under Wash</span></div>';">
                     </div>
                 </div>
 
-                <!-- 6. Carpet Wash -->
-                <div class="package-card">
-                    <div class="package-icon"><i class="fas fa-rug"></i></div>
-                    <h3>Carpet & Mat Wash</h3>
-                    <p class="package-desc">Deep extraction cleaning of carpets and floor mats. Removes stains, odors, and embedded dirt.</p>
-                    <div class="package-price">KES 600</div>
-                    <ul class="carwash-feature-list" style="text-align: left; margin: 0 auto; display: inline-block;">
-                        <li><i class="fas fa-check-circle"></i> Hot water extraction</li>
-                        <li><i class="fas fa-check-circle"></i> Stain & odor treatment</li>
-                        <li><i class="fas fa-check-circle"></i> Quick drying system</li>
-                        <li><i class="fas fa-check-circle"></i> Mat scrubbing & rinse</li>
-                    </ul>
-                    <div class="service-img-wrapper">
-                        <img src="images/carwash/carpet-wash.jpg" alt="Carpet Wash" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-rug></i><span>Carpet Wash Image</span></div>';">
-                    </div>
-                </div>
-
-                <!-- 7. Engine Wash -->
+                <!-- 10. Engine Wash -->
                 <div class="package-card">
                     <div class="package-icon"><i class="fas fa-engine-warning"></i></div>
                     <h3>Engine Bay Wash</h3>
-                    <p class="package-desc">Safe engine degreasing and detailing. Makes your engine look new and helps detect leaks early.</p>
-                    <div class="package-price">KES 700</div>
-                    <ul class="carwash-feature-list" style="text-align: left; margin: 0 auto; display: inline-block;">
-                        <li><i class="fas fa-check-circle"></i> Gentle degreaser application</li>
-                        <li><i class="fas fa-check-circle"></i> Brushing & rinse</li>
-                        <li><i class="fas fa-check-circle"></i> Plastic cover dressing</li>
-                        <li><i class="fas fa-check-circle"></i> Battery terminal check</li>
-                    </ul>
+                    <p class="package-desc">Safe degreasing and detailing of the engine bay – helps detect leaks and keeps it cool.</p>
+                    <div class="package-price">KES 200</div>
                     <div class="service-img-wrapper">
-                        <img src="images/carwash/engine-wash.jpg" alt="Engine Wash" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-engine-warning></i><span>Engine Wash Image</span></div>';">
+                        <img src="images/carwash/engine-wash.jpg" alt="Engine Wash" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-engine-warning></i><span>Engine Wash</span></div>';">
                     </div>
                 </div>
 
-                <!-- 8. Dashboard Polishing -->
+                <!-- 11. Carpet Wash -->
                 <div class="package-card">
-                    <div class="package-icon"><i class="fas fa-gauge-high"></i></div>
-                    <h3>Dashboard Polishing</h3>
-                    <p class="package-desc">Restore and protect your dashboard, console, and door panels with UV‑blocking dressing.</p>
-                    <div class="package-price">KES 350</div>
-                    <ul class="carwash-feature-list" style="text-align: left; margin: 0 auto; display: inline-block;">
-                        <li><i class="fas fa-check-circle"></i> Dust & grime removal</li>
-                        <li><i class="fas fa-check-circle"></i> Matte or gloss dressing</li>
-                        <li><i class="fas fa-check-circle"></i> UV protection</li>
-                        <li><i class="fas fa-check-circle"></i> Air vent detail</li>
-                    </ul>
+                    <div class="package-icon"><i class="fas fa-rug"></i></div>
+                    <h3>Carpet & Mat Wash</h3>
+                    <p class="package-desc">Deep extraction cleaning for carpets and floor mats – removes stains, odors & dirt.</p>
+                    <div class="package-price">KES 100 / m²</div>
                     <div class="service-img-wrapper">
-                        <img src="images/carwash/dashboard-polishing.jpg" alt="Dashboard Polishing" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-gauge-high></i><span>Dashboard Polishing Image</span></div>';">
+                        <img src="carwash2.jpg" alt="Carpet Wash" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-rug></i><span>Carpet Wash</span></div>';">
                     </div>
                 </div>
+
+                <!-- 12. Buffing & Polish -->
+                <div class="package-card">
+                    <div class="package-icon"><i class="fas fa-shield-haltered"></i></div>
+                    <h3>Buffing & Polish</h3>
+                    <p class="package-desc">Machine buffing with carnauba wax – removes swirl marks and restores showroom gloss.</p>
+                    <div class="package-price">KES 1,000</div>
+                    <div class="service-img-wrapper">
+                        <img src="images/carwash/buffing.jpg" alt="Buffing" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-shield-haltered></i><span>Buffing</span></div>';">
+                    </div>
+                </div>
+
+                <!-- 13. Thorough Cleaning -->
+                <div class="package-card featured">
+                    <div class="package-icon"><i class="fas fa-star"></i></div>
+                    <h3>Thorough Cleaning</h3>
+                    <p class="package-desc">Complete exterior wash + full interior deep cleaning – the ultimate refresh for your vehicle.</p>
+                    <div class="package-price">KES 2,500</div>
+                    <div class="service-img-wrapper">
+                        <img src="images/carwash/thorough-cleaning.jpg" alt="Thorough Cleaning" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder><i class=f fas fa-star></i><span>Thorough</span></div>';">
+                    </div>
+                </div>
+
             </div>
 
-            <!-- Add‑on Services Note -->
+            <!-- Add‑on Note -->
             <div class="text-center mt-3">
                 <p class="lead-text">All services can be added individually or combined. Ask about our <strong>combo packages</strong> for the best value! <br> We also offer <strong>monthly car wash subscriptions</strong> – contact us for details.</p>
                 <a href="contact.html" class="btn btn-primary btn-lg"><i class="fas fa-phone"></i> Call to Book Your Wash</a>
@@ -385,15 +391,15 @@
             </div>
             <div class="gallery-grid" style="margin-top: 30px;">
                 <div class="gallery-item">
-                    <img src="images/carwash/before-after-1.jpg" alt="Car before and after wash" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder style=height:100%><i class=f fas fa-car-side></i><span>Before/After</span></div>';">
+                    <img src="beforewash.jpg" alt="Car before and after wash" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder style=height:100%><i class=f fas fa-car-side></i><span>Before/After</span></div>';">
                     <div class="overlay"><span>Sedan: Before → After</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/carwash/before-after-2.jpg" alt="SUV before and after" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder style=height:100%><i class=f fas fa-truck></i><span>Before/After</span></div>';">
+                    <img src="afterwash2.jpg" alt="SUV before and after" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder style=height:100%><i class=f fas fa-truck></i><span>Before/After</span></div>';">
                     <div class="overlay"><span>SUV: Before → After</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/carwash/before-after-3.jpg" alt="Interior detailing result" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder style=height:100%><i class=f fas fa-spray-can-sparkles></i><span>Before/After</span></div>';">
+                    <img src="afterwash.jpg" alt="Interior detailing result" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=img-placeholder style=height:100%><i class=f fas fa-spray-can-sparkles></i><span>Before/After</span></div>';">
                     <div class="overlay"><span>Interior Detailing Magic</span></div>
                 </div>
             </div>
@@ -428,6 +434,7 @@
                         <a href="https://www.instagram.com/apexgrillchepterit" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.tiktok.com/@apexgrill2025?" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
                         <a href="https://wa.me/254722151654" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
@@ -443,11 +450,18 @@
                 <div class="footer-col">
                     <h4>Car Wash Services</h4>
                     <ul>
-                        <li><a href="carwash.html">Body Wash</a></li>
-                        <li><a href="carwash.html">Interior Detailing</a></li>
-                        <li><a href="carwash.html">Buffing & Wax</a></li>
-                        <li><a href="carwash.html">Engine Wash</a></li>
+                        <li><a href="carwash.html">Body Wash – Saloon</a></li>
+                        <li><a href="carwash.html">Body Wash – SUV/Van</a></li>
+                        <li><a href="carwash.html">Body Wash – Canter</a></li>
+                        <li><a href="carwash.html">Body Wash – Lorry/Bus</a></li>
+                        <li><a href="carwash.html">Body Wash – Mahewa</a></li>
+                        <li><a href="carwash.html">Body Wash – Tipper</a></li>
+                        <li><a href="carwash.html">Body Wash – Heavy Equip</a></li>
                         <li><a href="carwash.html">Under Wash</a></li>
+                        <li><a href="carwash.html">Engine Wash</a></li>
+                        <li><a href="carwash.html">Carpet Wash</a></li>
+                        <li><a href="carwash.html">Buffing & Polish</a></li>
+                        <li><a href="carwash.html">Thorough Cleaning</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -455,7 +469,7 @@
                     <ul class="footer-contact">
                         <li><i class="fas fa-map-marker-alt"></i> Kapsabet - Eldoret Rd, Chepterit</li>
                         <li><i class="fas fa-phone"></i> 0720054369</li>
-                        <li><i class="fas fa-envelope"></i> apexgrill2025@gmail.com </li>
+                        <li><i class="fas fa-envelope"></i> apexgrill2025@gmail.com</li>
                     </ul>
                 </div>
             </div>
